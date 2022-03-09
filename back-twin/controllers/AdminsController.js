@@ -10,7 +10,7 @@ module.exports = {
       email,
       password: password1,
     });
-
+    // commit
     admin.findOne(
       { $or: [{ email: email }, { adminname: adminname }] },
       (err, doc) => {
