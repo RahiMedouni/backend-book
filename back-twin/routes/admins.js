@@ -7,7 +7,7 @@ const {
   verifySigninAdminRequestBody,
 } = require("../utils/JoiSchemas");
 var jwt = require("jsonwebtoken");
-const AdminsController = require("../controllers/AdminssController");
+const AdminsController = require("../controllers/AdminsController");
 const { verifyProfileAdmin } = require("../controllers/AdminsController");
 
 /* GET users listing. */

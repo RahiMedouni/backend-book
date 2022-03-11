@@ -41,5 +41,5 @@ writerSchema.methods.comparePassword = function (candidatePassword, cb) {
   });
 };
 
-const wWriter = mongoose.model("writer", userSchema);
+const Writer = mongoose.model("writer", writerSchema);
 module.exports = Writer;

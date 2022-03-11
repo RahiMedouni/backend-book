@@ -7,10 +7,6 @@ var cors = require("cors");
 var indexRouter = require("./routes/index");
 var indexRouter = require("./routes/index");
 var apiRouter = require("./routes/api");
-var usersRouter = require("./routes/users");
-var writersRouter = require("./routes/writers");
-var adminsRouter = require("./routes/admins");
-
 var mongoose = require("mongoose");
 
 mongoose.connect("mongodb://localhost:27017/virtualLibrary", function (error) {

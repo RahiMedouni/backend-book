@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 
 let adminSchema = new Schema(
   {
-    adminrname: String,
+    adminname: String,
     email: String,
     password: String,
     // role: {
@@ -17,7 +17,7 @@ let adminSchema = new Schema(
 );
 
 adminSchema.pre("save", function (next) {
-  var writer = this;
+  var admin = this;
 
   // only hash the password if it has been modified (or is new)
   if (!admin.isModified("password")) return next();
@@ -43,5 +43,5 @@ adminSchema.methods.comparePassword = function (candidatePassword, cb) {
   });
 };
 
-const Admin = mongoose.model("writer", userSchema);
+const Admin = mongoose.model("admin", adminSchema);
 module.exports = Admin;
