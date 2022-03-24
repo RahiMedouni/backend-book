@@ -7,7 +7,7 @@ const {
   verifySigninWriterRequestBody,
 } = require("../utils/JoiSchemas");
 var jwt = require("jsonwebtoken");
-const WritersController = require("../controllers/WriterssController");
+const WritersController = require("../controllers/WritersController");
 const { verifyProfileWriter } = require("../controllers/WritersController");
 
 /* GET users listing. */

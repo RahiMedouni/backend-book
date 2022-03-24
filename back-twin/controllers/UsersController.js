@@ -77,7 +77,7 @@ module.exports = {
     );
   },
 
-  profileWriter: function (req, res, next) {
+  profileUser: function (req, res, next) {
     console.log({ headers: req.headers });
 
     User.findOne({ _id: req.decoded._id }, (err, user) => {

@@ -7,11 +7,15 @@ let adminSchema = new Schema(
     adminname: String,
     email: String,
     password: String,
-    // role: {
-    //   addBooks,
-    //   acceptBooks,
-    //   verifyWriters,
-    // },
+    profile: {
+      type: [String],
+      default: ["admin"],
+    },
+    roles: {
+      type: [String],
+      default: ["addbooks", "acceptBooks"],
+      // verifyWriters
+    },
   },
   { timestamps: true }
 );
