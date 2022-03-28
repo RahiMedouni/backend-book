@@ -6,6 +6,7 @@ let adminSchema = new Schema(
   {
     adminname: String,
     email: String,
+    task: String,
     password: String,
     profile: {
       type: [String],
@@ -13,7 +14,14 @@ let adminSchema = new Schema(
     },
     roles: {
       type: [String],
-      default: ["addbooks", "acceptBooks"],
+      default: [
+        "addBooks",
+        "approveBooks",
+        "deleteUsers",
+        "deleteBooks",
+        "deleteStory",
+        "addQuiz",
+      ],
       // verifyWriters
     },
   },

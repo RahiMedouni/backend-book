@@ -3,15 +3,16 @@ var jwt = require("jsonwebtoken");
 
 module.exports = {
   signupAdmin: function (req, res, next) {
-    let { email, adminname, password1, password2 } = req.body;
+    let { email, adminname, task, password1, password2 } = req.body;
 
     let newAdmin = new Admin({
       adminname,
       email,
+      task,
       password: password1,
     });
 
-    admin.findOne(
+    Admin.findOne(
       { $or: [{ email: email }, { adminname: adminname }] },
       (err, doc) => {
         if (err) return res.status(500).json({ msg: "Database Error ! " });

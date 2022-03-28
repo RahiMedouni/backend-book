@@ -7,10 +7,6 @@ let userSchema = new Schema(
     username: String,
     email: String,
     password: String,
-    profile: {
-      type: [String],
-      default: ["user"],
-    },
   },
   { timestamps: true }
 );

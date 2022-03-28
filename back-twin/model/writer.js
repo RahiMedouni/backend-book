@@ -7,9 +7,14 @@ let writerSchema = new Schema(
     writername: String,
     email: String,
     password: String,
-    // role: {
-    //   addBooks,
-    // },
+    profile: {
+      type: [String],
+      default: ["writer"],
+    },
+    roles: {
+      type: [String],
+      default: ["addBooks", "addQuiz"],
+    },
   },
   { timestamps: true }
 );

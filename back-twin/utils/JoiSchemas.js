@@ -81,8 +81,9 @@ const verifySigninWriterRequestBody = (req, res, next) => {
 };
 
 const signupAdminSchema = Joi.object({
-  Adminname: Joi.string().alphanum().min(8).max(30).trim().required(),
+  adminname: Joi.string().alphanum().min(8).max(30).trim().required(),
   email: Joi.string().email({ minDomainSegments: 2 }).required(),
+  task: Joi.string().required(),
   password1: Joi.string().pattern(new RegExp("^[a-zA-Z0-9]{6,30}$")).required(),
   password2: Joi.ref("password1"),
 }).with("password1", "password2");
